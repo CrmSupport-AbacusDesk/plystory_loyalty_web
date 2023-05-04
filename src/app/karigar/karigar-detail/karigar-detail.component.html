@@ -249,7 +249,7 @@
                                 <img [src]="uploadUrl + getData.document_image " (click)="openDialog(uploadUrl + getData.document_image)">
                             </div>
 
-                            <div class="img-box"  *ngIf="getData.document_image_back == 'Adharcard'">
+                            <div class="img-box"  *ngIf="getData.document_type == 'Adharcard'">
                                 <img [src]="uploadUrl + getData.document_image_back " (click)="openDialog(uploadUrl + getData.document_image_back)">
                             </div>
                             <div class="basic-details">
