@@ -80,7 +80,7 @@ deleteImage(id) {
     {
       
       data: {
-        'id' : id,
+        'img' : id,
         'mode' : string,
       }
     });
@@ -90,6 +90,10 @@ deleteImage(id) {
     });
 
   }
+
+
+
+
 
 
 }

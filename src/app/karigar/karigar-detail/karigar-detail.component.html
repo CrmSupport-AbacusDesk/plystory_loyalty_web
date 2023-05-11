@@ -21,7 +21,8 @@
                         
                         <div class="detail-info pr0">
                             <div class="img-box">
-                                <div class="name-box point-sec" (click)="balanceModel(getData.id)">
+                                <!-- (click)="balanceModel(getData.id)" -->
+                                <div class="name-box point-sec" >
                                     <div class="points ">
                                         <a>{{total_wallet_points}}</a>
                                         <h4>Balance Points</h4>
@@ -443,7 +444,7 @@
                                         <th class="w130">Redeem Status</th>
                                         <th class="w125">Gift Status</th>
                                         <th class="w110">Action</th>
-                                        <th class="w110">Reedem detail</th>
+                                        <!-- <th class="w110">Reedem detail</th> -->
                                     </tr>
                                 </table>
                             </div>
@@ -530,11 +531,11 @@
                                         
                                         <th class="w110">
                                         </th>
-                                        <th class="w100">
-                                            <!-- <div class="form-area">             
+                                        <!-- <th class="w100">
+                                            <div class="form-area">             
                                                 <button mat-button class="go" (click)="getReedamList()">Go</button>
-                                            </div> -->
-                                        </th>
+                                            </div>
+                                        </th> -->
                                     </tr>
                                 </table>
                             </div>
@@ -569,7 +570,7 @@
                                             
                                         </td>
                                         <td class="w110 blue"><a (click)="requestchangeStatus(i, val.id, val.gift_status )" *ngIf="val.receive_status != 'Received'  && val.gift_status != 'Reject' ">Gift Status</a></td>
-                                        <td class="w100" ><a class="blue" (click)="coupon_summary(val.id)">Summary</a></td>
+                                        <!-- <td class="w100" ><a class="blue" (click)="coupon_summary(val.id)">Summary</a></td> -->
                                     </tr>
                                 </table>
                             </div>
