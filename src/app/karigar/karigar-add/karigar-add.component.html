@@ -148,7 +148,7 @@
                                             <mat-form-field class="cs-input">
                                                 <mat-select placeholder="Document Type" [(ngModel)] = "karigarform.document_type" #document_type="ngModel" name="document_type" required>
                                                     <!-- <mat-option value ="PanCard" >Pan Card</mat-option> -->
-                                                    <mat-option value ="Adharcard">Aadhaar Card</mat-option>
+                                                    <mat-option value ="AadharCard">Aadhar Card</mat-option>
                                                     <mat-option value ="VoterCard">Voter Card</mat-option>
                                                     <mat-option value ="Driving License" >Driving License</mat-option> 
                                                 </mat-select>
@@ -176,7 +176,7 @@
                                 
                               
                                 
-                                <div class="col s12"  *ngIf="karigarform.document_type == 'Adharcard'">
+                                <div class="col s12"  *ngIf="karigarform.document_type == 'AadharCard'">
                                     <div class="option-field">
                                         <div class="control-field">
                                             <mat-form-field class="cs-input">
@@ -245,7 +245,7 @@
 
 
 
-                                            <li *ngIf="karigarform.document_type == 'Adharcard'">
+                                            <li *ngIf="karigarform.document_type == 'AadharCard'">
                                                 <div class="cs-file file-up ">
                                                     <label>
                                                         <input type="file" (change)="onUploadback($event)"
