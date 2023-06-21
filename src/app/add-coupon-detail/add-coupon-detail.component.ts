@@ -11,10 +11,11 @@ import { ActivatedRoute } from '@angular/router';
 export class AddCouponDetailComponent implements OnInit {
 
   value = 'Techiediaries';
-  print_coupon: any = {};
+  print_coupon: any = [];
   coupon_id: any;
   id: any;
-
+  loading_list:any = false;
+  savingData:any = false;
 
   constructor(public db: DatabaseService,  public dialog: DialogComponent,private route: ActivatedRoute) {
     this.route.params.subscribe(params => {
@@ -86,7 +87,12 @@ export class AddCouponDetailComponent implements OnInit {
       getPrintCoupon(){
         // this.filter.date = this.filter.date  ? this.db.pickerFormat(this.filter.date) : '';
       //  console.log("coupon list is come");
+      this.loading_list = true;
+      this.savingData = true;
+
        this.db.post_rqst({'id':this.coupon_id},'app_master/coupon_details').subscribe(r=>{
+        this.loading_list = false;
+        this.savingData = false;
          // console.log(r);
          this.print_coupon=r['coupons'];
          console.log(this.print_coupon);
