@@ -11,14 +11,23 @@ import { DialogComponent } from '../dialog/dialog.component';
 export class FaqQuestionnaireComponent implements OnInit {
     panelOpenState = false;
     toggle:boolean = false;
+    mode: string;
+    filter:any = {};
     
-    constructor(public alrt:MatDialog,public db:DatabaseService,public session:SessionStorage,public dialog:DialogComponent) { }
+    constructor(public alrt:MatDialog,public db:DatabaseService,public session:SessionStorage,public dialog:DialogComponent) { 
+       
+            this.filter.language = 'Eng';
+        
+    }
     
     form:any={};
     loginData:any={};
     loading:boolean = false;
     master_search:any=''
     ngOnInit() {
+
+        this.mode='1';
+
         this.session.getSe()
         .subscribe(resp=>{
             this.loginData = resp;
@@ -55,7 +64,8 @@ export class FaqQuestionnaireComponent implements OnInit {
     get_questions()
     {
         this.loading = true;
-        this.db.post_rqst({"master":this.master_search},"gallary/get_question")
+
+        this.db.post_rqst({"master":this.master_search,'filter':this.filter},"gallary/get_question")
         .subscribe(resp=>{
             console.log(resp);
             this.loading = false;
