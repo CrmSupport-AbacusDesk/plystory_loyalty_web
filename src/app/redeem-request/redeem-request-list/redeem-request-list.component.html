@@ -202,6 +202,7 @@
                                                 <mat-option value="Paytm">Paytm</mat-option>
                                                 <mat-option value="PhonePe">PhonePe</mat-option>
                                                 <mat-option value="Google Pay">Google Pay</mat-option>
+                                                <mat-option value="Bank Transfer">Bank Transfer</mat-option>
                                                 <mat-option value="Gift">Gift</mat-option>
                                             </mat-select>
                                         </mat-form-field>
@@ -289,6 +290,7 @@
                         <img src="assets/paytm.png" *ngIf="val.payment_type == 'Paytm'" class="upi-img h18">
                         <img src="assets/phonepe.png" *ngIf="val.payment_type == 'PhonePe'" class="upi-img">
                         <img src="assets/googlepay.png" *ngIf="val.payment_type == 'Google Pay'" class="upi-img">
+                        <img src="assets/bank_history.png" style="width: 34px !important;" *ngIf="val.payment_type == 'Bank Transfer'" class="upi-img">
                         <img src="assets/gift.svg" *ngIf="val.payment_type == 'Gift'" class="upi-img">
                         
                         <!-- {{val.payment_type}} -->
