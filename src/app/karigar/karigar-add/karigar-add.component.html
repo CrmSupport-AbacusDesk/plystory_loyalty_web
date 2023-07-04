@@ -315,6 +315,46 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col s8 ">
+                        <div class="sprate-box ">
+                            <div class="full-offer">
+                                <div class="top-heading">
+                                    <h2>Bank INFORMATION</h2>
+                                </div>
+                            </div>
+                            
+                            <div class="row option-field">
+                                <div class="col s3 ">
+                                    <div class="control-field">
+                                        <mat-form-field class="cs-input">
+                                            <input matInput placeholder="Account Holder Name" name="account_holder_name" [(ngModel)] = "karigarform.account_holder_name" #account_holder_name="ngModel" >
+                                        </mat-form-field>  
+                                    </div>
+                                </div>
+                                <div class="col s3">
+                                    <div class="control-field">
+                                        <mat-form-field class="cs-input">
+                                            <input matInput placeholder="Bank Name" name="bank_name" [(ngModel)] = "karigarform.bank_name" #bank_name="ngModel" >
+                                        </mat-form-field>  
+                                    </div>
+                                </div>
+                                <div class="col s3">
+                                    <div class="control-field">
+                                        <mat-form-field class="cs-input">
+                                            <input matInput placeholder="Account No." name="account_no" [(ngModel)] = "karigarform.account_no" #account_no="ngModel"   (keypress)="numeric_Number($event)" >
+                                        </mat-form-field>  
+                                    </div>
+                                </div>
+                                <div class="col s3">
+                                    <div class="control-field">
+                                        <mat-form-field class="cs-input">
+                                            <input matInput placeholder="IFSC Code" name="ifsc_code" [(ngModel)] = "karigarform.ifsc_code" #ifsc_code="ngModel"  maxlength="11" minlength="11"  >
+                                        </mat-form-field>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="save mt30" >
                     <button mat-button >SAVE</button>

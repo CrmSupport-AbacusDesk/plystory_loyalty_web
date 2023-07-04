@@ -238,6 +238,7 @@
                         </div>
                     </form>
                 </div>
+                
             </div>
             <div class="col s6  ">
                 <div class="sprate-box gift-offer">
@@ -265,6 +266,41 @@
                                             <p>Document Number</p>
                                             <span>{{getData.document_no ? getData.document_no : 'N/A'}}</span>
                                         </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sprate-box gift-offer m10">
+                    <div class="full-offer">
+                        <div class="top-heading">
+                            <h2> BANK DETAIL</h2>
+                        </div>
+                        <div class="detail-info pl0 pr0">
+                            
+                            <div class="basic-details">
+                                <div class="profile-info">
+                                    <ul>
+                                        <li>
+                                            <p>Account Holder Name</p>
+                                            <span>{{!getData.account_holder_name?'N/A':getData.account_holder_name | titlecase }}</span>
+                                        </li>
+                                        
+                                        <li>
+                                            <p>Bank Name</p>
+                                            <span>{{!getData.bank_name? 'N/A' : getData.bank_name| titlecase}}</span>
+                                        </li>
+                                        <li>
+                                            <p>Account No.</p>
+                                            <span>{{!getData.account_no ? 'N/A' : getData.account_no}}</span>
+                                        </li>
+                                        
+                                        <li>
+                                            <p>IFSC Code</p>
+                                            <span>{{!getData.ifsc_code ? 'N/A' : getData.ifsc_code}}</span>
+                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </div>

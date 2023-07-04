@@ -166,7 +166,8 @@
 
                             <th>Used Date & Used By</th>
                             <th class="w110">Mobile No.</th>
-                            <th class="w80 text-center ">Points</th>   
+                            <th class="w80 text-center ">Points</th> 
+                            <th class="w100">View Locations Map</th>  
                             <th class="w160">Remark</th>           
                             <th class="w100">State</th>           
                             <th class="w100">District</th>           
@@ -255,6 +256,8 @@
                                     </div>
                                 </div>
                             </th>
+                            <th class="w100"></th>
+
                             <th class="w160">
                                 <div class="vaild-into">
                                     <div class="form-area">
@@ -399,7 +402,17 @@
                         <td><p>{{val.scan_by_karigar_date | date : 'dd MMM yyyy'}} / <a class="blue" routerLink="/karigar-detail/{{val.scan_by_karigar_id}}/1" routerLinkActive="active">{{val.first_name  | titlecase }} {{val.last_name  | titlecase }}</a></p></td>
                         <td class="w110">{{val.mobile_no}}</td>
                         <td class="w80 text-center"><span class="back-bg">{{val.karigar_coupon_value}}</span></td> 
+                        <td class="w100" >
+                            <ng-container *ngIf="val.coupon_lat !=0  && val.coupon_lat!=null  && val.coupon_lat!='' ">
 
+                                <a style="color:blue;text-decoration: underline;"
+                                    href="http://maps.google.com/maps?q={{val.coupon_lat}},{{val.coupon_long}}"
+                                    target="blank">View Locations Map</a>
+                            </ng-container>
+            
+                            
+                            
+                        </td>
                         <td class="w160">{{val.remark}}</td>   
                         <td class="w100">{{val.state}}</td>   
                         <td class="w100">{{val.district}}</td>  

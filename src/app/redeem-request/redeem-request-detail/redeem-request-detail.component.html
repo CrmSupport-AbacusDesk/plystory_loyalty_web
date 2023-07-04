@@ -402,6 +402,29 @@
                     
                   </ul>
                   <ul>
+                    
+                    <li *ngIf="getData.account_holder_name">
+                      <p>Account Holder Name</p>
+                      <span>{{!getData.account_holder_name ? 'N/A' : getData.account_holder_name}}</span>
+                    </li>
+                     
+                    <li *ngIf="getData.bank_name">
+                      <p>Bank Name</p>
+                      <span>{{!getData.bank_name ? 'N/A' : getData.bank_name}}</span>
+                    </li>
+                     
+                    <li *ngIf="getData.account_no">
+                      <p>Account No.</p>
+                      <span>{{!getData.account_no ? 'N/A' : getData.account_no}}</span>
+                    </li>
+                     
+                    <li *ngIf="getData.ifsc_code">
+                      <p>IFSC Code</p>
+                      <span>{{!getData.ifsc_code ? 'N/A' : getData.ifsc_code}}</span>
+                    </li>
+                   
+                  </ul>
+                  <ul>
                     <li *ngIf="getData.estimated_date != null">
                       <p>Gift Points Transfer Date</p>
                       <span>{{getData.estimated_date | date : 'dd MMM yyyy'}}</span>
