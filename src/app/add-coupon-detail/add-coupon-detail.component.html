@@ -16,12 +16,12 @@
 
 
   <div class="container">
-    <!--  -->
-    <div class="card card-statistics" style="width: 50%;margin-left: 250px;" hidden>
+    <!--hidden  -->
+    <div class="card card-statistics" style="width: 50%;margin-left: 250px;" >
       <div id="print_card">
         <div id='qr_code_container' *ngFor="let row of print_coupon">
           <div
-            style="padding:0px;height: 100.5905511811px; width: 377.9527559055px; border-radius: 10px;margin: 0 auto;display: flex;background-color: #fff; position: relative;">
+            style="padding:0px;height: 188.97637795px; width: 415.7480315px; border-radius: 10px;margin: 0 auto;display: flex; position: relative;justify-content: space-around;">
             <div style="width: 250px;">
               <div class="coup_image">
                 <img [src]=image>
@@ -37,7 +37,7 @@
               <p style="font-family: 'Roboto', sans-serif;font-size: 12px;margin:0">Brand Name :{{row.product_point_group}}</p>
             </div>
             <div style="text-align: right">
-              <div class="qr-img" style="width: 105px;overflow: hidden;height: 105px;">
+              <div class="qr-img" style="width: 105px;overflow: hidden;height: 105px;margin-top: 20px;">
                 <ngx-qrcode [elementType]="elementType" value="{{row.coupon_code}}" cssClass="aclass"
                   errorCorrectionLevel="L">
                 </ngx-qrcode>

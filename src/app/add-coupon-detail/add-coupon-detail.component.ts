@@ -66,6 +66,7 @@ export class AddCouponDetailComponent implements OnInit {
         .coup_image img {
           width: 150px !important;
           height: 65px;
+          margin-top: 17px;
       }
         .barcode svg{
           width: 100%;
