@@ -8,10 +8,45 @@
     <div class="fixed">
         <div class="middle-container tab-header">
             <div class="tabs-list gift-tab-list pl5">
+               
+
+
+                <div class="tabs-list gift-tab-list">
+                    <ul>
+                        <li (click)="mode='1';filter = {};filter.language= 'Eng';  get_questions(); " [ngClass]="{'active': mode == '1'}">
+                            <a>
+                                <p>ENGLISH</p>
+                            </a>
+                        </li>
+                        <li (click)="mode='2';filter = {};filter.language= 'Hin';  get_questions(); " [ngClass]="{'active': mode == '2'}">
+                            <a>
+                                <p>HINDI</p>
+                            </a>
+                        </li>
+
+                        <li (click)="mode='3';filter = {};filter.language= 'Ben';  get_questions(); " [ngClass]="{'active': mode == '3'}">
+                            <a>
+                                <p>BENGALI</p>
+                            </a>
+                        </li>
+
+                        <li (click)="mode='4';filter = {};filter.language = 'Asm';  get_questions(); " [ngClass]="{'active': mode == '4'}">
+                            <a>
+                                <p>ASSAMESE</p>
+                          
+                            </a>
+                        </li>
+                       
+                    </ul>
+                   
+                </div>
+
+
                 <div class="input-field">
                     <input type="text" placeholder="Search" name="master_search" (keyup.enter)="get_questions()" [(ngModel)]="master_search">
                     <i class="material-icons">search</i>
                 </div>
+
             </div>
         </div>
     </div>
@@ -43,6 +78,22 @@
             <div class="category-hadding">
                 <h2>FAQ</h2>
                 <i (click)="toggle = false;" class="material-icons">clear</i>
+            </div>
+
+            <div class="ply_lang">
+            <div class="option-field">
+                <div class="control-field">
+                    <mat-form-field class="cs-input">
+                        <mat-select placeholder="Select Language" [(ngModel)] = "form.language" #language="ngModel" name="language" >
+                     
+                            <mat-option value ="Eng">English</mat-option>
+                            <mat-option value ="Hin">Hindi</mat-option>
+                            <mat-option value ="Ben" >Bengali</mat-option> 
+                            <mat-option value ="Asm" >Assamese</mat-option> 
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
             </div>
             
             <div class="add-image">
