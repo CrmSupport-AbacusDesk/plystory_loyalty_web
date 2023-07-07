@@ -8682,13 +8682,13 @@ h2.hed_mr {
 
 
 .prnt_prt {
-    height: 140px !important;
-    border: 2px solid #000;
+    // height: 140px !important;
+    // border: 2px solid #000;
     justify-content: space-between;
     margin-top: 4px !important;
 }
 .prt_txt {
-    margin-top: 15px;
+    // margin-top: 15px;
     margin-left: 10px;
 }
 
@@ -8710,4 +8710,14 @@ h2.hed_mr {
 .ply_lang {
     width: 93%;
     margin: 0 auto;
+}
+
+.prnt_brc img {
+    margin-top: -35px;
+}
+
+.coup_prnt {
+    border: 2px solid #000;
+    padding: 17px 6px 0px 7px;
+    height: 214px;
 }
