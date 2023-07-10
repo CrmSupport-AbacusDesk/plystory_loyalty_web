@@ -16,6 +16,7 @@ export class AddCouponDetailComponent implements OnInit {
   id: any;
   loading_list:any = false;
   savingData:any = false;
+  image: any='';
 
   constructor(public db: DatabaseService,  public dialog: DialogComponent,private route: ActivatedRoute) {
     this.route.params.subscribe(params => {
@@ -62,6 +63,11 @@ export class AddCouponDetailComponent implements OnInit {
           min-width:105px !important;
           height: 110px !important;
         }
+        .coup_image img {
+          width: 150px !important;
+          height: 65px;
+          margin-top: 17px;
+      }
         .barcode svg{
           width: 100%;
           height: 100%;
@@ -96,6 +102,8 @@ export class AddCouponDetailComponent implements OnInit {
          // console.log(r);
          this.print_coupon=r['coupons'];
          console.log(this.print_coupon);
+         this.image=r['image'];
+
        })
      }
     
