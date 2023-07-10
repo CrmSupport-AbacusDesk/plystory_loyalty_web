@@ -16,8 +16,8 @@
 
 
   <div class="container">
-    <!--hidden  -->
-    <div class="card card-statistics" style="width: 50%;margin-left: 250px;" >
+     
+    <div class="card card-statistics" style="width: 50%;margin-left: 250px;" hidden>
       <div id="print_card">
         <div id='qr_code_container' *ngFor="let row of print_coupon">
           <div
@@ -32,7 +32,7 @@
                
                 <span style="display:block;font-family: 'Roboto', sans-serif;margin: 0;">Ply Story</span>
               </h5>
-              <p style="font-family: 'Roboto', sans-serif;font-size: 12px;margin:0">Date of pkg. :{{row.date_created}}</p>
+              <!-- <p style="font-family: 'Roboto', sans-serif;font-size: 12px;margin:0">Date of packaging :{{row.date_created}}</p> -->
               <p style="font-family: 'Roboto', sans-serif;font-size: 12px;margin:0">Coupon Code :{{row.coupon_code}}</p>
               <p style="font-family: 'Roboto', sans-serif;font-size: 12px;margin:0">Brand Name :{{row.product_point_group}}</p>
             </div>
@@ -64,7 +64,7 @@
             </div>
             <div class="prnt_prt">
               <div class="prt_txt">
-                <label><strong>Date:</strong> {{row.date_created}} </label><br>
+                <!-- <label><strong>Date of packaging :</strong> {{row.date_created}} </label><br> -->
                 <label><strong>Coupon Code:</strong> {{row.coupon_code}} </label><br>
                 <label><strong>Brand Name:</strong> {{row.product_point_group}}</label>
               </div>
